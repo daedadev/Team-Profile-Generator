@@ -272,6 +272,4 @@ function createIntern(){
 
 }
 
-
-
 startMenu();
