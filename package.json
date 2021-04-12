@@ -1,0 +1,25 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Team Profile Generator Program",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wron1/Team-Profile-Generator.git"
+  },
+  "author": "Daniel Moore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wron1/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/wron1/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
