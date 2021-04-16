@@ -81,7 +81,6 @@ function createManager(){
 
         // Use the manager import to quickly create an manager object
         let manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNum)
-        console.log(manager);
 
         mainHTML += `
 <!DOCTYPE html>
@@ -95,7 +94,7 @@ function createManager(){
 </head>
 <body>
     <header>
-        <h1>Team Profile Generator</h1>
+        <h1>My Team</h1>
     </header>
     <!-- Table holding the information for the Manager -->
     <table>
@@ -114,7 +113,7 @@ function createManager(){
             <tr>
                 <td>${manager.name}</td>
                 <td>${manager.id}</td>
-                <td>${manager.email}</td>
+                <td><a href="mailto:${manager.email}">${manager.email}</a></td>
                 <td>${manager.officeNumber}</td>
             </tr>
         </tbody>
@@ -169,7 +168,6 @@ function chooseNext(){
 </html>`
 
             console.log('Congrats on your new list');
-            console.log(mainHTML);
 
             fs.writeFile('./dist/index.html', mainHTML,  err => {
 
@@ -211,14 +209,13 @@ function createEngineer(){
 
         // Use the Engineer import to quickly create an Engineer object
         let engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
-        console.log(engineer);
         
         engineerHTML += `            
             <tr>
                 <td>${engineer.name}</td>
                 <td>${engineer.id}</td>
-                <td>${engineer.email}</td>
-                <td>${engineer.github}</td>
+                <td><a href="mailto:${engineer.email}">${engineer.email}</a></td>
+                <td><a target="_blank" href="${engineer.github}">${engineer.github}</a></td>
             </tr>`
         
         chooseNext();
@@ -256,13 +253,12 @@ function createIntern(){
 
         // Use the intern import to quickly create an intern object
         let intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool)
-        console.log(intern);
 
         internHTML += `            
             <tr>
                 <td>${intern.name}</td>
                 <td>${intern.id}</td>
-                <td>${intern.email}</td>
+                <td><a href="mailto:${intern.email}">${intern.email}</a></td>
                 <td>${intern.school}</td>
             </tr>`
 
